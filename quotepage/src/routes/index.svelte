@@ -1,6 +1,6 @@
 <script>
 	import Quote from '$lib/Quote.svelte';
-import { bind, text } from 'svelte/internal';
+    import { fade } from 'svelte/transition';
 
     const endpoint = "https://starws.deta.dev/api/quotes"
 
@@ -29,7 +29,9 @@ import { bind, text } from 'svelte/internal';
 <br />
 
 {#each quotes as quote}
-    <Quote text={quote}/>
+    <div transition:fade={{duration: 300}}>
+        <Quote text={quote}/>
+    </div>
 {/each}
 
 
