@@ -22,7 +22,6 @@
 </svelte:head>
 
 <h1>Get your Star Wars quotes here.</h1>
-<p>It's a cool movie franchise?</p>
 <br />
 <input type="Number" bind:value="{length}">
 <button on:click={getQuotes}>Get some delicous Star Wars quotes</button>

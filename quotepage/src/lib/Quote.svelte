@@ -9,7 +9,7 @@
 <style>
     div {
         width: 100%;
-        background-color: rgb(100, 100, 100);
+        background-color: #0b3694;
         border-radius: 10px;
     }
 
