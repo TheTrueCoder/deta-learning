@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from random import choice
 
 def txt_file_list(filename: str):
@@ -11,12 +12,9 @@ app = FastAPI()
 # Load quotes into memory for speed-quoting
 quotes: str = txt_file_list("quotes.txt")
 
-@app.get("/")
-async def single_quote(id: int = 0):
-    "Responds with a random star wars quote under the 'quote' key."
-    return {'quote': choice(quotes), 'franchise': "Star Wars", 'id': id}
+app.mount("/", StaticFiles(directory="."), name="static content")
 
-@app.get("/list")
+@app.get("/api/quotelist")
 async def quote_list(length: int = 1):
     "Responds with random star wars quotes under the 'quotes' key."
     user_quotes = [choice(quotes) for i in range(length)]
