@@ -26,5 +26,6 @@ jobs:
       - uses: BogDAAAMN/deta-deploy-action@v1.0.1
         with:
           deta-access-token: ${{ secrets.DETA_TOKEN }}  # Project Key: jb7edi
+          deta-project: 'c0ie4stj'
           deta-name: 'swquotes'
           deta-project-dir: 'api/' #Optional: directory to be deployed on Deta. Default is the root "." 
