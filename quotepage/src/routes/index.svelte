@@ -22,6 +22,10 @@
 </svelte:head>
 
 <h1>Get your Star Wars quotes here.</h1>
+<div>
+    <h3>API Uptime</h3>
+    <img alt="Uptime Robot ratio (30 days)" src="https://img.shields.io/uptimerobot/ratio/m789271530-a645a23583e3ce9e6ea6b0e6">
+</div>
 <br />
 <input type="Number" bind:value="{length}">
 <button on:click={getQuotes}>Get some delicous Star Wars quotes</button>
