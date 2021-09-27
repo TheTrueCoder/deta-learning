@@ -2,7 +2,7 @@
 	import Quote from '$lib/Quote.svelte';
     import { fade } from 'svelte/transition';
 
-    const endpoint = "https://starws.deta.dev/api/quotes"
+    const endpoint = "https://swquotes.nrhomelab.workers.dev/api/quotes"
 
     let length = 1
     let quotes = []
@@ -27,7 +27,7 @@
     <img alt="Uptime Robot ratio (30 days)" src="https://img.shields.io/uptimerobot/ratio/m789271530-a645a23583e3ce9e6ea6b0e6">
 </div>
 <br />
-<input type="Number" bind:value="{length}">
+<input type="Number" min="1" bind:value="{length}">
 <button on:click={getQuotes}>Get some delicous Star Wars quotes</button>
 <br />
 
