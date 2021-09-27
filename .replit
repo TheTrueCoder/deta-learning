@@ -1,0 +1,2 @@
+language = "python3"
+run = "cd api; python3 -m uvicorn --host 0.0.0.0 main:app"
