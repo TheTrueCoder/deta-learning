@@ -1,5 +1,6 @@
 <script>
-	import Quote from '$lib/Quote.svelte';
+    export const prerender = true;
+    import Quote from '$lib/Quote.svelte';
     import { fade } from 'svelte/transition';
 
     const endpoint = "https://swquotes.nrhomelab.workers.dev/api/quotes"
