@@ -2,7 +2,7 @@
 	import Quote from '$lib/Quote.svelte';
     import { fade } from 'svelte/transition';
 
-    const endpoint = "https://swquotes.nrhomelab.workers.dev/api/quotes"
+    let endpoint = "https://swquotes.nrhomelab.workers.dev/api/quotes"
 
     let length = 1
     let quotes = []
