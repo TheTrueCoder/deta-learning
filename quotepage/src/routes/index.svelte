@@ -2,7 +2,7 @@
 	import Quote from '$lib/Quote.svelte';
     import { fade } from 'svelte/transition';
 
-    let endpoint = "https://swquotes.nrhomelab.workers.dev/api/quotes"
+    let endpoint = "https://starws.deta.dev/api/quotes"
 
     let length = 1
     let quotes = []
@@ -26,6 +26,12 @@
     <h3>API Uptime</h3>
     <img alt="Uptime Robot ratio (30 days)" src="https://img.shields.io/uptimerobot/ratio/m789271530-a645a23583e3ce9e6ea6b0e6">
 </div>
+<br/>
+<!-- Choose backend -->
+<select name="api-route" id="api-route" bind:value="{endpoint}">
+    <option value="https://starws.deta.dev/api/quotes">Deta API</option>
+    <option value="https://swquotes.nrhomelab.workers.dev/api/quotes">Cloudflare Workers API</option>
+</select>
 <br />
 <input type="Number" min="1" bind:value="{length}">
 <button on:click={getQuotes}>Get some delicous Star Wars quotes</button>
